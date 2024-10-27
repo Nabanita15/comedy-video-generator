@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: url(../public/cartoon.jpg) no-repeat center center;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+.body-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  opacity: 0.2; /* Optional to set opacity here */
+  z-index: 2; /* Layered on top of the overlay */
+}
+
+/* Main App Container */
+.App {
+  position: relative;
+  z-index: 3; /* Brings the main content above the overlay */
+  width: 100%;
+  max-width: 600px;
+  background: rgba(24, 23, 23, 0.7);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Heading */
+.App h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e63946; /* Red theme color */
+}
+
+/* Input Styling */
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #e63946; /* Red theme color */
+}
+
+/* Button Styling */
+button {
+  margin-top: 1.5rem;
+  background-color: #e63946; /* Red theme color */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b5323b; /* Darker shade for hover effect */
+}
+
+/* Video Display */
+video {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Additional Styling for Video Section */
+.App h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 1.5rem;
+}
